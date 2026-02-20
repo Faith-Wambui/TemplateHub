@@ -6,7 +6,7 @@
 
 ## 🌐 Live Site
 
-👉 **[View the Template Library](https://github.com/Faith-Wambui/TemplateHub)**
+👉 **[View the Template Library](https://faith-wambui.github.io/TemplateHub/)**
 
 ---
 
