@@ -1,4 +1,4 @@
-# 📁 DPro Template Library — PM & MEAL Resources
+# 📁 DPro Template Library: PM & MEAL Resources
 
 > A professional web platform for accessing Project Management, Program Management, and MEAL templates — built on PM4NGOs' DPro suite of guides.
 
