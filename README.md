@@ -29,11 +29,11 @@ All templates are developed in line with **PM4NGOs' Project DPro, Program DPro, 
 
 ## ✨ Features
 
-- 🔍 **Live search** — find any template instantly by name or keyword
-- 🗂️ **Category filtering** — browse by MEAL, Project, or Program Management
-- ⬇️ **One-click download** — all templates in `.docx` format, ready to edit
-- 📱 **Fully responsive** — works on desktop, tablet, and mobile
-- ⚡ **No login required** — open access for all users
+- 🔍 **Live search** - find any template instantly by name or keyword
+- 🗂️ **Category filtering** - browse by MEAL, Project, or Program Management
+- ⬇️ **One-click download** - all templates in `.docx` format, ready to edit
+- 📱 **Fully responsive** - works on desktop, tablet, and mobile
+- ⚡ **No login required** - open access for all users
 
 ---
 
@@ -70,7 +70,7 @@ All templates are developed in line with **PM4NGOs' Project DPro, Program DPro, 
 }
 ```
 
-3. Save and push to GitHub — the site updates automatically.
+3. Save and push to GitHub - the site updates automatically.
 
 ---
 
@@ -85,7 +85,7 @@ To deploy your own copy:
 3. Set Source to `main` branch, root folder (`/`)
 4. Your site will be live at `https://YOUR-USERNAME.github.io/YOUR-REPO-NAME`
 
-> **Note:** Always use a local server (e.g. VS Code Live Server) when developing locally — do not open `index.html` directly in the browser as a file.
+> **Note:** Always use a local server (e.g. VS Code Live Server) when developing locally - do not open `index.html` directly in the browser as a file.
 
 ---
 
