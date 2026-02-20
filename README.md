@@ -6,7 +6,7 @@
 
 ## 🌐 Live Site
 
-👉 **[View the Template Library](https://YOUR-USERNAME.github.io/YOUR-REPO-NAME)**
+👉 **[View the Template Library](https://github.com/Faith-Wambui/TemplateHub)**
 
 ---
 
