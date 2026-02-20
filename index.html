@@ -1,122 +1,179 @@
-# 📁 DPro Template Library — PM & MEAL Resources
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TemplateHub — PM & MEAL Resources</title>
+  <link rel="icon" type="image/png" href="logo.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;0,6..96,700;0,6..96,900;1,6..96,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
 
-> A professional web platform for accessing Project Management, Program Management, and MEAL templates — built on PM4NGOs' DPro suite of guides.
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <div class="logo">
+        <img src="logo.png" alt="TemplateHub Logo" class="logo-img"/>
+        <span class="logo-text">Template<span class="logo-accent">Hub</span></span>
+      </div>
+      <div class="nav-links">
+        <a href="#categories">Templates</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#categories">Templates</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 
----
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-content">
+      <div class="hero-badge">Comprehensive Template Library</div>
+      <h1 class="hero-title">
+        Tools That Move<br/>
+        <span class="hero-title-accent">Projects Forward</span>
+      </h1>
+      <p class="hero-sub">Download ready-to-use templates for Project Management, Program Management, and MEAL frameworks - built for professionals who deliver results.</p>
+      <div class="hero-actions">
+        <a href="#categories" class="btn btn-primary">Browse Templates</a>
+        <a href="#about" class="btn btn-ghost">Learn More</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num" id="totalCount">0</span><span class="stat-label">Templates</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">3</span><span class="stat-label">Categories</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">Free</span><span class="stat-label">To Download</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="floating-card fc1">
+        <div class="fc-icon">📋</div>
+        <div class="fc-text"><strong>Work Plan</strong><br/><small>Project Management</small></div>
+      </div>
+      <div class="floating-card fc2">
+        <div class="fc-icon">📊</div>
+        <div class="fc-text"><strong>Logframe</strong><br/><small>Program Management</small></div>
+      </div>
+      <div class="floating-card fc3">
+        <div class="fc-icon">📈</div>
+        <div class="fc-text"><strong>MEAL Plan</strong><br/><small>MEAL Framework</small></div>
+      </div>
+      <div class="hero-blob"></div>
+    </div>
+  </section>
 
-## 🌐 Live Site
+  <!-- SEARCH -->
+  <section class="search-section">
+    <div class="container">
+      <div class="search-wrap">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" placeholder="Search templates e.g. risk register, indicator tracker..." />
+        <button class="search-clear" id="searchClear" aria-label="Clear">✕</button>
+      </div>
+      <div id="searchResultsLabel" class="search-label"></div>
+    </div>
+  </section>
 
-👉 **[View the Template Library](https://YOUR-USERNAME.github.io/YOUR-REPO-NAME)**
+  <!-- CATEGORIES -->
+  <section class="categories-section" id="categories">
+    <div class="container">
+      <div class="section-header">
+        <h2>Template <span class="accent">Library</span></h2>
+        <p>Click any category to explore templates. All files are in .docx format, ready to edit.</p>
+      </div>
 
----
+      <!-- Category Tabs -->
+      <div class="category-tabs" id="categoryTabs">
+        <button class="tab-btn active" data-cat="all">All Templates</button>
+        <button class="tab-btn" data-cat="project-management">Project Management</button>
+        <button class="tab-btn" data-cat="program-management">Program Management</button>
+        <button class="tab-btn" data-cat="meal">MEAL</button>
+      </div>
 
-## 📌 About
+      <!-- Template Grid -->
+      <div class="template-grid" id="templateGrid">
+        <!-- Populated by JS -->
+      </div>
 
-This platform provides a curated library of **49 ready-to-use templates** for development professionals working across project management, programme management, and MEAL (Monitoring, Evaluation, Accountability & Learning).
+      <div class="no-results hidden" id="noResults">
+        <div class="no-results-icon">🔍</div>
+        <h3>No templates found</h3>
+        <p>Try a different search term or browse all categories.</p>
+      </div>
+    </div>
+  </section>
 
-All templates are developed in line with **PM4NGOs' Project DPro, Program DPro, and MEAL DPro guides** — internationally recognised standards used by development professionals worldwide.
+  <!-- ABOUT -->
+  <section class="about-section" id="about">
+    <div class="container about-grid">
+      <div class="about-text">
+        <div class="section-tag">About This Platform</div>
+        <h2>Built for <span class="accent">Professionals</span> Who Deliver</h2>
+        <p>This platform provides a curated collection of professional templates designed for project managers, program leads, and MEAL specialists working in complex environments.</p>
+        <p>All templates are developed in line with PM4NGOs' DPro suite of guides, supporting internationally recognised standards in project management, programme management, and MEAL.</p>
+        <div class="about-features">
+          <div class="feature-item"><span class="feature-dot"></span>Ready-to-use .docx format</div>
+          <div class="feature-item"><span class="feature-dot"></span>Based on PM4NGOs DPro standards</div>
+          <div class="feature-item"><span class="feature-dot"></span>Free to download and customise</div>
+          <div class="feature-item"><span class="feature-dot"></span>Regularly updated</div>
+        </div>
+      </div>
+      <div class="about-cards">
+        <div class="about-card ac-blue">
+          <div class="ac-icon">🗂️</div>
+          <h3>Project Management</h3>
+          <p>Work plans, risk registers, stakeholder matrices, and more.</p>
+        </div>
+        <div class="about-card ac-navy">
+          <div class="ac-icon">🌐</div>
+          <h3>Program Management</h3>
+          <p>Logframes, theories of change, donor reports, and coordination tools.</p>
+        </div>
+        <div class="about-card ac-orange">
+          <div class="ac-icon">📐</div>
+          <h3>MEAL</h3>
+          <p>Indicator trackers, data collection tools, evaluation frameworks, and learning reviews.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-### What's included
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="container contact-inner">
+      <h2>Can't Find What You Need?</h2>
+      <p>Request a template or suggest improvements via email.</p>
+      <a href="mailto:wambuifaith2@gmail.com" class="btn btn-primary">Request a Template</a>
+    </div>
+  </section>
 
-| Category | Templates |
-|---|---|
-| 📊 MEAL | 14 templates |
-| 📋 Project Management | 15 templates |
-| 🌐 Program Management | 20 templates |
-| **Total** | **49 templates** |
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="logo">
+        <img src="logo.png" alt="TemplateHub Logo" class="logo-img"/>
+        <span class="logo-text">Template<span class="logo-accent">Hub</span></span>
+      </div>
+      <p class="footer-copy">© 2026 TemplateHub. All templates free to use and adapt.</p>
+      <div class="footer-links">
+        <a href="https://github.com/Faith-Wambui/TemplateHub" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </footer>
 
----
-
-## ✨ Features
-
-- 🔍 **Live search** — find any template instantly by name or keyword
-- 🗂️ **Category filtering** — browse by MEAL, Project, or Program Management
-- ⬇️ **One-click download** — all templates in `.docx` format, ready to edit
-- 📱 **Fully responsive** — works on desktop, tablet, and mobile
-- ⚡ **No login required** — open access for all users
-
----
-
-## 🗂️ Project Structure
-
-```
-├── index.html                  ← Main platform page
-├── styles.css                  ← Styling (Royal Blue / Navy / Orange theme)
-├── script.js                   ← Search, filtering, and rendering logic
-├── templates.js                ← Template registry — edit this to add templates
-├── logo.png                    ← Platform logo & favicon
-├── README.md                   ← This file
-└── DPro_Template_Library/
-    ├── MEAL_Templates/         ← 14 MEAL templates
-    ├── Project_Templates/      ← 15 Project Management templates
-    └── Program_Templates/      ← 20 Program Management templates
-```
-
----
-
-## ➕ Adding a New Template
-
-1. Place your `.docx` file in the correct subfolder inside `DPro_Template_Library/`
-2. Open `templates.js` and add a new entry:
-
-```js
-{
-  id: "pm-16",                          // Unique ID
-  name: "My New Template",             // Display name
-  description: "What it does.",        // Short description (1-2 sentences)
-  category: "project-management",      // project-management | program-management | meal
-  icon: "📌",                           // Any emoji — must be unique
-  file: "DPro_Template_Library/Project_Templates/My_New_Template.docx"
-}
-```
-
-3. Save and push to GitHub — the site updates automatically.
-
----
-
-## 🚀 Deployment (GitHub Pages)
-
-This site is hosted for free on GitHub Pages.
-
-To deploy your own copy:
-
-1. Fork or clone this repository
-2. Go to **Settings → Pages**
-3. Set Source to `main` branch, root folder (`/`)
-4. Your site will be live at `https://YOUR-USERNAME.github.io/YOUR-REPO-NAME`
-
-> **Note:** Always use a local server (e.g. VS Code Live Server) when developing locally — do not open `index.html` directly in the browser as a file.
-
----
-
-## 🎨 Theme
-
-| Colour | Hex |
-|---|---|
-| Royal Blue | `#2055C7` |
-| Navy | `#0A1A3A` |
-| Orange | `#F4731A` |
-
-Fonts: **Bodoni Moda** (headings) · **Jost** (body)
-
-To update colours or fonts, edit the CSS variables at the top of `styles.css`.
-
----
-
-## 📚 Based On
-
-- [PM4NGOs Project DPro Guide](https://www.pm4ngos.org/project-dpro/)
-- [PM4NGOs Program DPro Guide](https://www.pm4ngos.org/program-dpro/)
-- [PM4NGOs MEAL DPro Guide](https://www.pm4ngos.org/meal-dpro/)
-
----
-
-## ✉️ Template Requests
-
-Missing a template? Use the **Request a Template** button on the site to get in touch.
-
----
-
-## 📄 License
-
-Templates are free to use and adapt for non-commercial development work. Please credit PM4NGOs and the DPro guides where appropriate.
+  <script src="templates.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
